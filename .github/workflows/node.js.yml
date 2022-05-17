@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 16.x]
+        node-version: [16.x]
       fail-fast: false
 
     steps:
@@ -41,10 +41,10 @@ jobs:
           npm ci
       - name: Build
         run: |
-          npm run build -- --prod
+          npm run build
       - name: Lint
         run: |
           npm run lint
       - name: Test
         run: |
-          npm run test -- --prod
+          npm run test
