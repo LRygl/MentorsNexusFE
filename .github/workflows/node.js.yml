@@ -41,10 +41,10 @@ jobs:
           npm ci
       - name: Build
         run: |
-          npm run build --configuration prod
+          npm run build
 #      - name: Lint
 #        run: |
 #        npm run lint
       - name: Test
         run: |
-          npm run test --configuration prod
+          npm run test
