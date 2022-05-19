@@ -1,0 +1,60 @@
+nav{
+  background-color: #2B4168;
+  border-bottom: #E24585;
+  border-width: 2px;
+}
+
+a{
+  color:#FFFFFF;
+}
+a:hover {
+  color:#E24585;
+}
+
+img {
+  width: 150px;
+  height: auto;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+}
+
+button {
+	border-radius: 20px;
+	border: 2px solid #2B4168;
+	background-color: #2B4168;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px 25px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+  transition: 0.3s ease;
+}
+
+button.ghost {
+	background-color: transparent;
+	border-color: #E24585;
+  color: #FFFFFF;
+  transition: 0.3s ease;
+}
+
+button.ghost:hover {
+  background-color: #E24585;
+	border-color: #E24585;
+  color: #FFFFFF;
+  transition: 0.3s ease;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px 0 #a0a0a0;
+}
+
+.navbar-brand{
+  position:relative;
+  padding-right: 50px;
+
+}

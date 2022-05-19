@@ -1,8 +1,6 @@
 app-footer{
-  position:fixed;
-  bottom:0px;
-  background-color:#333;
+  position:relative;
+  bottom: -200px;
+  padding-top: 50px;
   width:100%;
-  height: 30px;
-  color: aliceblue;
   }

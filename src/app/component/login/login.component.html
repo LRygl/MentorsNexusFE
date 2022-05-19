@@ -11,7 +11,7 @@
 			<input type="text" placeholder="Jméno" />
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Heslo" />
-			<button>SIGN UP CALL ENDPOINT</button>
+			<button class="move">SIGN UP CALL ENDPOINT</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
@@ -22,7 +22,6 @@
 				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
-			<span>or use your account</span>
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Heslo" />
 			<a href="#">Zapoměli jste svoje heslo?</a>
@@ -33,13 +32,13 @@
 		<div class="overlay">
 			<div class="overlay-panel overlay-left">
 				<h1>Vítejte zpět!</h1>
-				<p>To keep connected with us please login with your personal info</p>
-				<button class="ghost" id="signIn" (click)="signIn()">SIGN IN</button>
+				<p>Pokud jíž máte existující účet, můžete se přihlásit</p>
+				<button class="ghost" id="signIn" (click)="signIn()">PRIHLÁŠENÍ</button>
 			</div>
 			<div class="overlay-panel overlay-right">
-				<h1>Hello, Friend!</h1>
-				<p>Enter your personal details and start journey with us</p>
-				<button class="ghost" id="signUp" (click)="signUp()">SIGN UP</button>
+				<h1>Jste tu poprvé?</h1>
+				<p>Vyplňte pár základních údajů o sobě a můžete začít</p>
+				<button class="ghost" id="signUp" (click)="signUp()">REGISTRACE</button>
 			</div>
 		</div>
 	</div>
