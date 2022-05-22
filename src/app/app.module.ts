@@ -16,6 +16,8 @@ import { NotificationService } from './service/notification.service';
 
 import { FooterComponent } from './component/footer/footer.component';
 import { HeaderComponent } from './component/header/header.component';
+import { ResetPasswordComponent } from './component/reset-password/reset-password.component';
+import { HomeComponent } from './component/home/home.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { HeaderComponent } from './component/header/header.component';
     LoginComponent,
     UserComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ResetPasswordComponent,
+    HomeComponent
   ],
   exports: [
     FooterComponent
