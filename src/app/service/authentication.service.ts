@@ -13,8 +13,8 @@ import { JwtHelperService } from '@auth0/angular-jwt'
 
 export class AuthenticationService {
   public host: string = environment.apiUrl;
-  private token: string = "";
-  private loggedInUsername: string = "";
+  private token = "";
+  private loggedInUsername = "";
   private jwtHelper = new JwtHelperService();
 
 

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,9 @@ import { FooterComponent } from './component/footer/footer.component';
 import { HeaderComponent } from './component/header/header.component';
 import { ResetPasswordComponent } from './component/reset-password/reset-password.component';
 import { HomeComponent } from './component/home/home.component';
+import { CourseComponent } from './component/course/course.component';
+import { CarouselComponent } from './component/carousel/carousel.component';
+
 
 
 @NgModule({
@@ -28,7 +32,9 @@ import { HomeComponent } from './component/home/home.component';
     FooterComponent,
     HeaderComponent,
     ResetPasswordComponent,
-    HomeComponent
+    HomeComponent,
+    CourseComponent,
+    CarouselComponent
   ],
   exports: [
     FooterComponent
@@ -38,6 +44,7 @@ import { HomeComponent } from './component/home/home.component';
     AppRoutingModule,
     HttpClientModule,
     NotificationModule,
+    NgbModule
   ],
   providers: [
     AuthenticationService,

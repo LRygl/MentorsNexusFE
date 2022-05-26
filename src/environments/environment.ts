@@ -4,7 +4,13 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:8081'
+  apiUrl: 'http://localhost:8081',
+
+//PATHS Listing to be used inside application links - "/" provided in routerLink HTML element
+  UrlPathHome: 'home',
+  UrlPathLogin: 'login',
+  UrlPathCourse: 'course',
+
 };
 /*
  * For easier debugging in development mode, you can import the following file

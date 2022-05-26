@@ -1,0 +1,15 @@
+<div class="container-sm">
+
+
+      <ngb-carousel *ngIf="event_list">
+        <ng-template ngbSlide *ngFor="let event of current_events">
+          <img [src]="event.img" alt="Random slide">
+          <div class="carousel-caption">
+            <h3>{{ event.eventLocation }}</h3>
+            <p [innerText]="event.eventDescription"></p>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+
+
+</div>

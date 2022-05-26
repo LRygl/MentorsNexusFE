@@ -25,6 +25,7 @@
     "@auth0/angular-jwt": "^5.0.2",
     "@auth0/auth0-angular": "^1.9.0",
     "@fortawesome/angular-fontawesome": "^0.10.2",
+    "@ng-bootstrap/ng-bootstrap": "^12.1.2",
     "@popperjs/core": "^2.10.2",
     "angular-notifier": "^11.0.0",
     "bootstrap": "^5.1.3",

@@ -1,13 +1,12 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg shadow ">
   <!-- Container wrapper -->
   <div class="container-fluid">
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="">
+    <a class="navbar-brand" [routerLink]="['/',UrlPathHome]">
       <img src="assets/images/1color4mentors-logo.png"/>
     </a>
 
-    <!-- Toggle button -->
 
     <!-- Collapsible wrapper -->
     <div
@@ -17,10 +16,10 @@
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" [routerLink]="['/',UrlPathHome]">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link active" aria-current="page" [routerLink]="['/',UrlPathCourse]">Kurzy</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -35,7 +34,7 @@
       <!-- Left links -->
 
       <div class="d-flex align-items-center">
-        <button type="button" class="ghost">
+        <button type="button" class="ghost" [routerLink]="['/',UrlPathLogin]">
           Přihlásit se
         </button>
       </div>

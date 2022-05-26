@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
+
+
 * {
 	box-sizing: border-box;
 }
@@ -82,12 +84,34 @@ form {
 }
 
 input {
+  display: inline-block;
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
   border-radius: 5px;
+}
+
+input:focus{
+  outline: 1px solid #E24585;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+input:hover{
+  outline: 1px solid #E24585;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
 }
 
 .container {
@@ -226,6 +250,24 @@ input {
 	margin: 0 5px;
 	height: 40px;
 	width: 40px;
+}
+
+.social-container a:hover{
+  border: 1px solid #2B4168;
+  background-color: #2B4168;
+  color: #FFFFFF;
+  text-decoration: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
+}
+
+a.social:hover{
+
 }
 
 .move{

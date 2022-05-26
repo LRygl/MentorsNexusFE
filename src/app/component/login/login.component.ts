@@ -14,7 +14,7 @@ import { NotificationService } from 'src/app/service/notification.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit, OnDestroy {
-  public showLoading: boolean = false;
+  public showLoading = false;
   private subsciptions: Subscription[] = [];
 
   constructor(
