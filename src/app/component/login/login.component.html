@@ -1,22 +1,4 @@
 <div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form action="#">
-			<h1>Vytvořit účet</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>nebo použíjte Váš email pro dokončení registrace</span>
-
-        <input type="email" placeholder="Email"/>
-
-
-			<input type="password" placeholder="Heslo" />
-			<button class="move" role="link">SIGN UP CALL ENDPOINT</button>
-		</form>
-	</div>
-	<div class="form-container sign-in-container">
 		<form action="#">
 			<h1>Přihlaste se</h1>
 			<div class="social-container">
@@ -29,20 +11,5 @@
 			<a routerLink="/resetpassword">Zapoměli jste svoje heslo?</a>
 			<button>SIGN IN CALL ENDPOINT</button>
 		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>Vítejte zpět!</h1>
-				<p>Pokud jíž máte existující účet, můžete se přihlásit</p>
-				<button class="ghost" id="signIn" (click)="signIn()">PRIHLÁŠENÍ</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>Jste tu poprvé?</h1>
-				<p>Vyplňte pár základních údajů o sobě a můžete začít</p>
-				<button class="ghost" id="signUp" (click)="signUp()">REGISTRACE</button>
-			</div>
-		</div>
-	</div>
 </div>
 

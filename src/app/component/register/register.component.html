@@ -1,1 +1,20 @@
-<p>register works!</p>
+<div class="container" id="container">
+  <form #registerForm="ngForm" (ngSubmit)="onRegister(registerForm)">
+    <h1>Registrace</h1>
+    <div class="social-container ">
+      <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+      <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <input name="email" type="text" class="form-control" placeholder="username" ngModel #email="ngModel" required>
+    <input type="password" placeholder="Heslo" />
+    <a routerLink="/resetpassword">Zapoměli jste svoje heslo?</a>
+
+    <button [disabled]="registerForm.invalid || showLoading"  type="submit" name="button" class="btn btn-primary px-4">
+      <i *ngIf="showLoading" class="fas fa-spinner fa-spin">&nbsp;&nbsp;</i>
+      <span *ngIf="showLoading">Loading</span>
+      <span *ngIf="!showLoading">Register</span>
+    </button>
+  </form>
+</div>
+

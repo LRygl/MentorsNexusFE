@@ -1,15 +1,19 @@
-<div class="container-sm">
-
-
+<div class="carousel-container">
       <ngb-carousel *ngIf="event_list">
         <ng-template ngbSlide *ngFor="let event of current_events">
-          <img [src]="event.img" alt="Random slide">
+          <img class="mh-100 mw-100" [src]="event.img" alt="Random slide">
+
           <div class="carousel-caption">
-            <h3>{{ event.eventLocation }}</h3>
+            <h2>{{ event.eventLocation }}</h2>
             <p [innerText]="event.eventDescription"></p>
+            <div class="details">
+              <button class="ghost">ZOBRAZIT DETAIL</button>
+              <span>1450 Kč</span>
+            </div>
           </div>
+
         </ng-template>
       </ngb-carousel>
-
-
 </div>
+
+

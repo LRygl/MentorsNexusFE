@@ -1,8 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
-
-
 * {
 	box-sizing: border-box;
 }
@@ -21,6 +17,7 @@ body {
 h1 {
 	font-weight: bold;
 	margin: 0;
+  border-bottom: 4px solid #E24585;
 }
 
 h2 {
@@ -121,10 +118,11 @@ input:hover{
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-	width: 768px;
+	width: 500px;
 	max-width: 100%;
 	min-height: 480px;
   margin-top: 150px;
+  padding-top: 25px;
 }
 
 .form-container {
@@ -265,11 +263,6 @@ input:hover{
   transition: all 0.3s ease-in-out;
 
 }
-
-a.social:hover{
-
-}
-
 .move{
   margin-top: 15px;
 }

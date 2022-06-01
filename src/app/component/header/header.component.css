@@ -1,7 +1,17 @@
+
 nav{
   background-color: #2B4168;
   border-bottom: #E24585;
   border-width: 2px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+
+}
+
+nav span {
+  padding: 0 0 0 25px;
+  letter-spacing: 0.2em;
 }
 
 a{
@@ -11,9 +21,12 @@ a:hover {
   color:#E24585;
 }
 
+a:active, a:focus{
+  color:#FFFFFF;
+
+}
+
 img {
-  width: 150px;
-  height: auto;
   image-rendering: -moz-crisp-edges; /* Firefox */
   image-rendering: -o-crisp-edges; /* Opera */
   image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
@@ -22,12 +35,12 @@ img {
 }
 
 button {
-	border-radius: 20px;
+	border-radius: 10px;
 	border: 2px solid #2B4168;
 	background-color: #2B4168;
 	color: #FFFFFF;
 	font-size: 12px;
-	font-weight: bold;
+
 	padding: 10px 25px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -57,4 +70,14 @@ button.ghost:hover {
   position:relative;
   padding-right: 50px;
 
+}
+
+.navbar-brand:hover{
+  transition: 0.3s ease;
+
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }

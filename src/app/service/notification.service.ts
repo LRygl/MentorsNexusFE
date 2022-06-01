@@ -9,7 +9,9 @@ export class NotificationService {
 
 
 
-  constructor( private notifier: NotifierService ) { }
+  constructor(
+    private notifier: NotifierService
+  ) { }
 
 
   public notify( type: NotificationType, message: string ){

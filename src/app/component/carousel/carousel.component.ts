@@ -54,14 +54,14 @@ export class CarouselComponent implements OnInit {
       event:' Event 6',
       eventLocation:'Mumbai',
       eventDescription:'Mumbai is hub of startups',
-      img: './assets/images/lasvegas.jpg',
+      img: 'https://picsum.photos/900/500?random&t=10',
       eventStartDate: new Date(),
       eventEndingDate: new Date()
     },
     {
       event:' Event 7',
       eventLocation:'Barcelona',
-      eventDescription:'Barcelona is another good city',
+      eventDescription:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum fermentum tortor id mi. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Vivamus luctus egestas leo. Vivamus porttitor turpis ac leo. Vestibulum fermentum tortor id mi. Fusce suscipit libero eget elit. Et harum quidem rerum facilis est et expedita distinctio. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam.',
       img: 'https://picsum.photos/900/500?random&t=6',
       eventStartDate: new Date(),
       eventEndingDate: new Date()
@@ -76,6 +76,7 @@ export class CarouselComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

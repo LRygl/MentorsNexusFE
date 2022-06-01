@@ -1,4 +1,82 @@
-ngb-carousel {
+ngb-carousel img {
   height: 100vh;
-  width: 1250px;
+  width: 100vw;
  }
+
+/*
+ .carousel-content {
+   position: absolute;
+   left: 15%;
+   color:brown;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+ }
+
+*/
+H2{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  Font-size: 3rem;
+  border-bottom: 4px solid #E24585;
+  width: fit-content;
+}
+
+p{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  Font-size: 1rem;
+  float: left;
+  text-align: left;
+}
+ .carousel-caption{
+    position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    color: #fff;
+    text-align: center;
+ }
+
+ button {
+	border-radius: 10px;
+	border: 2px solid #2B4168;
+	background-color: #2B4168;
+	color: #FFFFFF;
+	font-size: 12px;
+	padding: 10px 25px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+  transition: 0.3s ease;
+  float:right;
+}
+
+button.ghost {
+	background-color: #E24585;
+	border-color: #E24585;
+  color: #FFFFFF;
+  transition: 0.3s ease;
+}
+
+button.ghost:hover {
+  background-color: #E24585;
+	border-color: #E24585;
+  color: #FFFFFF;
+  transition: 0.3s ease;
+}
+
+.details {
+  display: flex;
+  flex-direction:column;
+  width: 200px;
+  float:right;
+
+}
+
+.details span{
+  font-size: 0.6em;
+  font-family: "Poppins";
+  padding: 5px 0 0 0;
+}

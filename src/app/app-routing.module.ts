@@ -6,6 +6,7 @@ import { LoginComponent } from '../app/component/login/login.component';
 import { ResetPasswordComponent } from './component/reset-password/reset-password.component';
 import { HomeComponent } from './component/home/home.component';
 import { CourseComponent } from './component/course/course.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
 
