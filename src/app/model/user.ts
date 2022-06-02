@@ -5,7 +5,7 @@ export class User {
   public firstName: string;
   public lastName: string;
   public username: string;
-  public email: string;
+  public userEmail: string;
   public logInDateDisplay!: Date;
   public joinDate!: Date;
   public profileImageUrl!: string;
@@ -18,7 +18,7 @@ export class User {
     this.firstName = '';
     this.lastName = '';
     this.username = '';
-    this.email = '';
+    this.userEmail = '';
     this.active = false
     this.notLocked = false;
     this.role = '';

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,8 +13,7 @@ import { UserService } from './service/user.service';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { LoginComponent } from './component/login/login.component';
 import { UserComponent } from './component/user/user.component';
-import { NotificationModule } from './notification.module';
-import { NotificationService } from './service/notification.service';
+
 
 import { FooterComponent } from './component/footer/footer.component';
 import { HeaderComponent } from './component/header/header.component';
@@ -23,6 +22,8 @@ import { HomeComponent } from './component/home/home.component';
 import { CourseComponent } from './component/course/course.component';
 import { CarouselComponent } from './component/carousel/carousel.component';
 import { RegisterComponent } from './component/register/register.component';
+import { NotificationModule } from './notification.module';
+import { NotificationService } from './service/notification.service';
 
 
 
@@ -34,7 +35,8 @@ import { RegisterComponent } from './component/register/register.component';
     FooterComponent
   ],
   imports: [
-    BrowserModule, AppRoutingModule, HttpClientModule, NotificationModule, NgbModule, FormsModule, ReactiveFormsModule
+    BrowserModule, AppRoutingModule, HttpClientModule, NotificationModule, NgbModule,
+    ReactiveFormsModule
   ],
   providers: [
     AuthenticationService, UserService, AuthenticationGuard, NotificationService,

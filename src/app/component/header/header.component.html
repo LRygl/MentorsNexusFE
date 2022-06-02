@@ -28,8 +28,11 @@
       <!-- Left links -->
 
       <div class="d-flex align-items-center">
-        <button type="button" class="ghost" [routerLink]="['/',UrlPathLogin]">
+        <button type="button" class="ghost" *ngIf="!isLoggedIn" [routerLink]="['/',UrlPathLogin]">
           Přihlásit se
+        </button>
+        <button type="button" class="ghost" (click)="onLogout()" *ngIf="isLoggedIn" [routerLink]="['/',UrlPathHome]">
+          Odhlásit se
         </button>
       </div>
     </div>

@@ -1,20 +1,66 @@
+<div class="card">
+  <h4 class="card-header">Register</h4>
+  <div class="card-body">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+              <label for="userEmail">P E-Mail</label>
+              <input type="email" formControlName="userEmail" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userEmail.errors  }" />
+              <div *ngIf="submitted && f.userEmail.errors" class="invalid-feedback">
+                  <div *ngIf="f.userEmail.errors.required">Email je povinný údaj</div>
+                  <div *ngIf="f.userEmail.errors.pattern">Email nemá formát</div>
+              </div>
+          </div>
+          <div class="form-group">
+            <label for="userSecondaryEmail">S E-Mail</label>
+            <input type="email" formControlName="userSecondaryEmail" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userSecondaryEmail.errors  }" />
+            <div *ngIf="submitted && f.userSecondaryEmail.errors" class="invalid-feedback">
+                <div *ngIf="f.userSecondaryEmail.errors.required">Email je povinný údaj</div>
+                <div *ngIf="f.userSecondaryEmail.errors.pattern">Email nemá formát</div>
+                <div *ngIf="f.userSecondaryEmail.errors.mustMatch">Emaily musí být shodné</div>
+            </div>
+        </div>
+          <div class="form-group">
+              <label for="userPassword">Last Name</label>
+              <input type="password" formControlName="userPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userPassword.errors }" />
+              <div *ngIf="submitted && f.userPassword.errors" class="invalid-feedback">
+                  <div *ngIf="f.userPassword.errors.required">Last Name is required</div>
+              </div>
+          </div>
+          <div class="form-group">
+              <button [disabled]="loading" class="btn btn-primary">
+                  <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                  Register
+              </button>
+              <a routerLink="../login" class="btn btn-link">Cancel</a>
+          </div>
+      </form>
+  </div>
+</div>
+
+<!--
+
 <div class="container" id="container">
-  <form #registerForm="ngForm" (ngSubmit)="onRegister(registerForm)">
+  <form #registerForm="ngForm" (ngSubmit)="onRegister(registerForm.value)">
     <h1>Registrace</h1>
     <div class="social-container ">
       <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
       <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
       <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
     </div>
-    <input name="email" type="text" class="form-control" placeholder="username" ngModel #email="ngModel" required>
-    <input type="password" placeholder="Heslo" />
+    <input name="userEmail" type="text" class="form-control" placeholder="username"
+    ngModel #email="ngModel" required>
+
+    <input name="userPassword" type="password" placeholder="Heslo" ngModel #password="ngModel" required>
+
+
     <a routerLink="/resetpassword">Zapoměli jste svoje heslo?</a>
 
     <button [disabled]="registerForm.invalid || showLoading"  type="submit" name="button" class="btn btn-primary px-4">
       <i *ngIf="showLoading" class="fas fa-spinner fa-spin">&nbsp;&nbsp;</i>
       <span *ngIf="showLoading">Loading</span>
-      <span *ngIf="!showLoading">Register</span>
+      <span *ngIf="!showLoading">Registrovat</span>
     </button>
   </form>
 </div>
 
+-->
