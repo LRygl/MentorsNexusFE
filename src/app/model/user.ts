@@ -2,27 +2,25 @@ export class User {
 
   public id!: number;
   public userId!: string;
-  public firstName: string;
-  public lastName: string;
-  public username: string;
+  public userFirstName: string;
+  public userLastName: string;
   public userEmail: string;
   public logInDateDisplay!: Date;
-  public joinDate!: Date;
-  public profileImageUrl!: string;
+  public userJoinDate!: Date;
+  public userProfileImageUrl!: string;
   public active: boolean;
   public notLocked: boolean;
-  public role: string;
-  public authorities: [];
+  public userRole: string;
+  public userAuthorities: [];
 
   constructor(){
-    this.firstName = '';
-    this.lastName = '';
-    this.username = '';
+    this.userFirstName = '';
+    this.userLastName = '';
     this.userEmail = '';
     this.active = false
     this.notLocked = false;
-    this.role = '';
-    this.authorities = [];
+    this.userRole = '';
+    this.userAuthorities = [];
   }
 
 }

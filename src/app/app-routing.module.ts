@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UserComponent} from '../app/component/user/user.component';
+import UserComponent from '../app/component/user/user.component';
 import { RegisterComponent } from '../app/component/register/register.component';
 import { LoginComponent } from '../app/component/login/login.component';
 import { ResetPasswordComponent } from './component/reset-password/reset-password.component';
@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'course', component: CourseComponent},
 
 
-  { path: 'user/management', component: UserComponent },
+  { path: 'admin/users', component: UserComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 
 ];

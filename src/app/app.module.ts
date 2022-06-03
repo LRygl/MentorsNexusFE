@@ -12,7 +12,7 @@ import { UserService } from './service/user.service';
 
 import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { LoginComponent } from './component/login/login.component';
-import { UserComponent } from './component/user/user.component';
+import UserComponent from './component/user/user.component';
 
 
 import { FooterComponent } from './component/footer/footer.component';

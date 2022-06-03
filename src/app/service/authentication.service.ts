@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from '../model/user';
 import { JwtHelperService } from '@auth0/angular-jwt'
 
@@ -20,6 +20,9 @@ export class AuthenticationService {
 
   constructor(private http: HttpClient) { }
 
+  isUserLoggedIn = new BehaviorSubject(false);
+
+
   public login(user: User): Observable<HttpResponse<User> | HttpErrorResponse> {
     return this.http.post<User> (`${this.host}/user/login`, user, { observe: 'response' });
   }
@@ -35,11 +38,11 @@ export class AuthenticationService {
     localStorage.removeItem('user');
     localStorage.removeItem('token');
     localStorage.removeItem('users');
+    this.isUserLoggedIn.next(false);
   }
 
   public saveToken(token: string): void{
     this.token = token;
-    console.log(token);
     localStorage.setItem('token', token);
   }
 
@@ -48,7 +51,12 @@ export class AuthenticationService {
   }
 
   public getUserFromLocalCache(): User {
-    return JSON.parse(localStorage.getItem('user') || '');
+    if(this.token===""){
+      return null;
+    } else {
+      return JSON.parse(localStorage.getItem('user') || '');
+    }
+
   }
 
 
@@ -63,11 +71,11 @@ export class AuthenticationService {
 
   public isLoggedIn(): boolean {
     this.loadToken();
-    console.log(this.loadToken())
     if (this.token != null && this.token !== ''){
       if (this.jwtHelper.decodeToken(this.token).sub != null || ''){
         if (!this.jwtHelper.isTokenExpired(this.token)){
           this.loggedInUsername = this.jwtHelper.decodeToken(this.token).sub;
+          this.isUserLoggedIn.next(true);
           return true;
         }
       }

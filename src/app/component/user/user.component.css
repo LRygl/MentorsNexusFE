@@ -1,0 +1,9 @@
+
+ :host {
+  display:flex;
+  width: 400px;
+}
+
+.table-content{
+  padding-top:150px;
+}

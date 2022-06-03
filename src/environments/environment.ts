@@ -10,6 +10,8 @@ export const environment = {
   UrlPathHome: 'home',
   UrlPathLogin: 'login',
   UrlPathCourse: 'course',
+  UrlPathAdmin: 'admin',
+  UrlAdminUsers: "admin/users",
 
 };
 /*

@@ -81,3 +81,63 @@ button.ghost:hover {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+#sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 999;
+  background: #2B4168;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar {
+  /* don't forget to add all the previously mentioned styles here too */
+  background: #2B4168;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #2B4168;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #2B4168;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+#sidebar ul li a:hover {
+  color: #2B4168;
+  background: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+  color: #fff;
+  background: #2B4168;
+}
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #2B4168;
+}
