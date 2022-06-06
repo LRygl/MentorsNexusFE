@@ -24,12 +24,14 @@ import { CarouselComponent } from './component/carousel/carousel.component';
 import { RegisterComponent } from './component/register/register.component';
 import { NotificationModule } from './notification.module';
 import { NotificationService } from './service/notification.service';
+import { CourseService } from './service/course.service';
+import { CourseCategoryComponent } from './component/course-category/course-category.component';
 
 
 
 @NgModule({
   declarations: [ AppComponent, LoginComponent, ResetPasswordComponent, UserComponent, FooterComponent, HeaderComponent,
-    ResetPasswordComponent, HomeComponent, CourseComponent, CarouselComponent, RegisterComponent
+    ResetPasswordComponent, HomeComponent, CourseComponent, CarouselComponent, RegisterComponent, CourseCategoryComponent
   ],
   exports: [
     FooterComponent
@@ -39,7 +41,7 @@ import { NotificationService } from './service/notification.service';
     ReactiveFormsModule
   ],
   providers: [
-    AuthenticationService, UserService, AuthenticationGuard, NotificationService,
+    AuthenticationService, UserService, CourseService, AuthenticationGuard, NotificationService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [

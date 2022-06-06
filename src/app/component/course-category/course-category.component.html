@@ -1,0 +1,32 @@
+<table class="table table-hover">
+  <thead class="table-borderless">
+    <tr class="text-center">
+      <th>Photo</th>
+      <th>User ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let category of categories">
+    <tr class="text-center">
+      <td>{{category.id}}</td>
+      <td>{{category.courseCategoryDescription}}</td>
+      <td>{{category.courseCategoryCode}}</td>
+      <td>{{category.courseCategoryCreatedDate}}</td>
+      <td>{{category.courseCategoryUpdatedDate}}</td>
+      <td>{{category.isCourseCategoryActive}}</td>
+      <td>
+        <div class="btn-group btn-group-sm">
+          <button class="btn btn-outline-info"><i class="fas fa-edit"></i></button>
+          <button class="btn btn-outline-info"><i class="fa fa-edit"></i></button>
+          <button class="btn btn-outline-danger" (click)="deleteCourseCategory(category.id)"><i class="fas fa-trash"></i></button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button class="btn btn-primary">Add New Category</button>

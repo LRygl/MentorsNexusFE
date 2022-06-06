@@ -68,8 +68,6 @@ export class CarouselComponent implements OnInit {
     },
   ]
 
-  upcoming_events =  this.event_list.filter( event => event.eventStartDate > new Date());
-  past_events = this.event_list.filter(event => event.eventEndingDate < new Date());
   current_events =  this.event_list.filter( event => (event.eventStartDate >= new Date() && (event.eventEndingDate <= new Date())))
 
 

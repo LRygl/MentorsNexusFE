@@ -7,6 +7,7 @@ import { ResetPasswordComponent } from './component/reset-password/reset-passwor
 import { HomeComponent } from './component/home/home.component';
 import { CourseComponent } from './component/course/course.component';
 import { FormsModule } from '@angular/forms';
+import { CourseCategoryComponent } from './component/course-category/course-category.component';
 
 const routes: Routes = [
 
@@ -18,7 +19,7 @@ const routes: Routes = [
 
   { path: 'home', component: HomeComponent},
   { path: 'course', component: CourseComponent},
-
+  { path: 'category', component: CourseCategoryComponent },
 
   { path: 'admin/users', component: UserComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
