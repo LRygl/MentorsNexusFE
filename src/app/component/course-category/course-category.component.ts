@@ -15,6 +15,9 @@ import { NotificationService } from 'src/app/service/notification.service';
 export class CourseCategoryComponent implements OnInit {
 
   public isRefreshing: boolean;
+  public showAddForm: boolean;
+  public showEditForm: boolean;
+  public showCategory: boolean;
   public categories: CourseCategory[];
   private subscription: Subscription[] = [];
 
@@ -28,9 +31,29 @@ export class CourseCategoryComponent implements OnInit {
 
   ngOnInit(): void {
       this.getAllCourseCategories(true);
+      this.showAddForm = false;
+      this.showEditForm = false;
+      this.showCategory = true;
   }
 
+  displayAddForm():void{
+    this.showAddForm = true;
+    this.showEditForm = false;
+    this.showCategory = false;
+  }
 
+  displayEditForm(categoryId: number):void{
+    this.showAddForm = false;
+    this.showEditForm = true;
+    this.showCategory = false;
+
+    console.log(categoryId);
+
+  }
+
+  getCourseCategoryById(categoryId: number): void {
+    return null;
+  }
 
   getAllCourseCategories(showNotification: boolean): void {
     this.isRefreshing = true;
@@ -44,13 +67,16 @@ export class CourseCategoryComponent implements OnInit {
           }
         },
         (errorResponse: HttpErrorResponse) => {
-          this.notificationService.sendErrorNotification("ERROR");
+          this.notificationService.sendErrorNotification("ERROR" + errorResponse);
           this.isRefreshing = false;
         }
       )
     )
   }
 
+  upadeCourseCategory():void{
+    return null;
+  }
 
   deleteCourseCategory(categoryId: number){
     this.courseCategoryService.deleteCourseCategory(categoryId).subscribe(

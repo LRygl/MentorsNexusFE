@@ -2,6 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Course } from '../model/course';
 import { CourseCategory } from '../model/courseCategory';
 
 @Injectable({
@@ -19,6 +20,10 @@ export class CourseCategoryService {
 
   public getAllCourseCategories(): Observable<CourseCategory[] | HttpErrorResponse>{
     return this.httpClient.get<CourseCategory[]>(`${this.host}/category/list/all`);
+  }
+
+  public getCourseCategoryById(categoryId: number): Observable<CourseCategory | HttpErrorResponse>{
+    return this.httpClient.get<CourseCategory>(`${this.host}/category/${categoryId}`);
   }
 
 
